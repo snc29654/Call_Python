@@ -22,7 +22,7 @@ namespace Call_Python
         {
             ProcessStartInfo pInfo = new ProcessStartInfo();
             pInfo.FileName = "python";
-            pInfo.Arguments = @"C:\temp\CallPython\MP4_play1\MP4_play1.py";
+            pInfo.Arguments = @"C:\github\Call_python\MP4_play\MP4_play.py";
             Process.Start(pInfo);
         }
     }
