@@ -25,5 +25,14 @@ namespace Call_Python
             pInfo.Arguments = @"C:\github\Call_python\MP4_play\MP4_play.py";
             Process.Start(pInfo);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\list_jpg_disp\list_jpg_disp.py";
+            Process.Start(pInfo);
+
+        }
     }
 }

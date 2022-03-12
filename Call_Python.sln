@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Call_Python", "Call_Python\Call_Python.csproj", "{5F2A2A24-CAA2-4C97-8475-8A5205F36ED1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Call_Python", "Call_Python\Call_Python.csproj", "{5F2A2A24-CAA2-4C97-8475-8A5205F36ED1}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MP4_play1", "..\..\..\..\..\temp\CallPython\MP4_play1\MP4_play1.pyproj", "{C6004418-4074-4746-A225-5830A1B81D13}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MP4_play1", "..\..\temp\CallPython\MP4_play1\MP4_play1.pyproj", "{C6004418-4074-4746-A225-5830A1B81D13}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "list_jpg_disp", "list_jpg_disp\list_jpg_disp.pyproj", "{F1F3032D-96D1-4874-A2BC-63E8FAD0CE48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,8 @@ Global
 		{5F2A2A24-CAA2-4C97-8475-8A5205F36ED1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6004418-4074-4746-A225-5830A1B81D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6004418-4074-4746-A225-5830A1B81D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F3032D-96D1-4874-A2BC-63E8FAD0CE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F3032D-96D1-4874-A2BC-63E8FAD0CE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
