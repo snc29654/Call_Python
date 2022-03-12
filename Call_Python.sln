@@ -9,6 +9,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MP4_play1", "..\..\temp\Cal
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "list_jpg_disp", "list_jpg_disp\list_jpg_disp.pyproj", "{F1F3032D-96D1-4874-A2BC-63E8FAD0CE48}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "select_jpg_disp", "select_jpg_disp\select_jpg_disp.pyproj", "{E3D7E54C-E9EC-4AD7-9979-7F0B3DE53F58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,8 @@ Global
 		{C6004418-4074-4746-A225-5830A1B81D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1F3032D-96D1-4874-A2BC-63E8FAD0CE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F1F3032D-96D1-4874-A2BC-63E8FAD0CE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3D7E54C-E9EC-4AD7-9979-7F0B3DE53F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3D7E54C-E9EC-4AD7-9979-7F0B3DE53F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
