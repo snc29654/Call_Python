@@ -13,6 +13,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MP4_play", "MP4_play\MP4_pl
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "tkinter_memo", "tkinter_memo\tkinter_memo.pyproj", "{E9F477E2-6D3F-4EAF-8615-359DF84295CD}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "button_jpg_folder", "button_jpg_folder\button_jpg_folder.pyproj", "{9779D606-715C-4978-8866-4B550D7401EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,8 @@ Global
 		{650D7DA4-7E39-46C5-A9CC-15FE855C4000}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9F477E2-6D3F-4EAF-8615-359DF84295CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E9F477E2-6D3F-4EAF-8615-359DF84295CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9779D606-715C-4978-8866-4B550D7401EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9779D606-715C-4978-8866-4B550D7401EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
