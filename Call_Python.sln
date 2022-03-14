@@ -9,7 +9,9 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "list_jpg_disp", "list_jpg_d
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "select_jpg_disp", "select_jpg_disp\select_jpg_disp.pyproj", "{E3D7E54C-E9EC-4AD7-9979-7F0B3DE53F58}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MP4_play", "..\..\..\..\..\github\Call_python\MP4_play\MP4_play.pyproj", "{82EBCA92-6B8B-48E1-8DF9-FDADAD21A7B5}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MP4_play", "MP4_play\MP4_play.pyproj", "{650D7DA4-7E39-46C5-A9CC-15FE855C4000}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "tkinter_memo", "tkinter_memo\tkinter_memo.pyproj", "{E9F477E2-6D3F-4EAF-8615-359DF84295CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,8 +27,10 @@ Global
 		{F1F3032D-96D1-4874-A2BC-63E8FAD0CE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3D7E54C-E9EC-4AD7-9979-7F0B3DE53F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E3D7E54C-E9EC-4AD7-9979-7F0B3DE53F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82EBCA92-6B8B-48E1-8DF9-FDADAD21A7B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82EBCA92-6B8B-48E1-8DF9-FDADAD21A7B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650D7DA4-7E39-46C5-A9CC-15FE855C4000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650D7DA4-7E39-46C5-A9CC-15FE855C4000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F477E2-6D3F-4EAF-8615-359DF84295CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F477E2-6D3F-4EAF-8615-359DF84295CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
