@@ -15,6 +15,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "tkinter_memo", "tkinter_mem
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "button_jpg_folder", "button_jpg_folder\button_jpg_folder.pyproj", "{9779D606-715C-4978-8866-4B550D7401EE}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "kenban", "kenban\kenban.pyproj", "{55CC4358-FF75-4EAF-80F3-A34E095DFA0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,8 @@ Global
 		{E9F477E2-6D3F-4EAF-8615-359DF84295CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9779D606-715C-4978-8866-4B550D7401EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9779D606-715C-4978-8866-4B550D7401EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55CC4358-FF75-4EAF-80F3-A34E095DFA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55CC4358-FF75-4EAF-80F3-A34E095DFA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
