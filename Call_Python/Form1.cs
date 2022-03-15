@@ -69,5 +69,14 @@ namespace Call_Python
             pInfo.Arguments = @"C:\github\Call_python\kenban\kenban.py";
             Process.Start(pInfo);
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\janken\janken.py";
+            Process.Start(pInfo);
+
+        }
     }
 }
