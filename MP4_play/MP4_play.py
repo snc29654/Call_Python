@@ -25,6 +25,8 @@ import tkinter as tk
 from tkinter import font
 import cv2
 import threading
+import webbrowser
+
 
         
 
@@ -64,6 +66,11 @@ class image_gui(ttk.Combobox):
         button6= Button(root_main, text=u'終了', command=self.button6_clicked)  
         button6.grid(row=0, column=1)  
         button6.place(x=250, y=10) 
+
+        button8= Button(root_main, text=u'ヘルプ', command=self.button8_clicked)  
+        button8.grid(row=0, column=1)  
+        button8.place(x=250, y=170) 
+
 
 
         self.txt3 = tkinter.Entry(width=6)
@@ -195,6 +202,10 @@ class image_gui(ttk.Combobox):
         self.quit()
         root_main.destroy()
 
+    def button8_clicked(self):  
+       
+
+        webbrowser.open('https://plaza.rakuten.co.jp/kyoyoukun/diary/202201060000/')
 
 
 
