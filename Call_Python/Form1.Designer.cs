@@ -45,6 +45,8 @@ namespace Call_Python
             this.label7 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -202,11 +204,32 @@ namespace Call_Python
             this.label8.TabIndex = 15;
             this.label8.Text = "jpg画像変形";
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(475, 10);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(113, 35);
+            this.button9.TabIndex = 16;
+            this.button9.Text = "diary_memo";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(622, 20);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 15);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "webメモ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 477);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label7);
@@ -249,6 +272,8 @@ namespace Call_Python
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label9;
     }
 }
 

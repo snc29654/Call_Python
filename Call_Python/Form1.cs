@@ -87,5 +87,14 @@ namespace Call_Python
             Process.Start(pInfo);
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\diary_memo\diary_memo.py";
+            Process.Start(pInfo);
+
+        }
     }
 }
