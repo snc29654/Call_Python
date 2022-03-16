@@ -25,6 +25,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "diary_memo", "diary_memo\di
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "large_and_small", "large_and_small\large_and_small.pyproj", "{BD1031B8-65CC-47A5-B8A3-8881AEB5D33E}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "select_jpg_disp_multi", "select_jpg_disp_multi\select_jpg_disp_multi.pyproj", "{5063507E-F1D3-416A-90AE-7CB5EA7CD7C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,8 @@ Global
 		{89D943D4-305C-4B12-B6B5-1B822E90C301}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD1031B8-65CC-47A5-B8A3-8881AEB5D33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BD1031B8-65CC-47A5-B8A3-8881AEB5D33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5063507E-F1D3-416A-90AE-7CB5EA7CD7C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5063507E-F1D3-416A-90AE-7CB5EA7CD7C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

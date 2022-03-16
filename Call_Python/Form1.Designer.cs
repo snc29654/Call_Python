@@ -49,6 +49,8 @@ namespace Call_Python
             this.label9 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -244,11 +246,32 @@ namespace Call_Python
             this.label10.TabIndex = 19;
             this.label10.Text = "jpg画像拡大縮小";
             // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(472, 135);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(114, 31);
+            this.button11.TabIndex = 20;
+            this.button11.Text = "select_jpg_disp_multi";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(620, 142);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 15);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "4枚jpg自動再生";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 477);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label9);
@@ -299,6 +322,8 @@ namespace Call_Python
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label11;
     }
 }
 

@@ -105,5 +105,14 @@ namespace Call_Python
             Process.Start(pInfo);
 
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\select_jpg_disp_multi\select_jpg_disp_multi.py";
+            Process.Start(pInfo);
+
+        }
     }
 }
