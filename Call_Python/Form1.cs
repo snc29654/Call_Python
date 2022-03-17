@@ -132,5 +132,14 @@ namespace Call_Python
             Process.Start(pInfo);
 
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\mp4_to_jpg\mp4_to_jpg.py";
+            Process.Start(pInfo);
+
+        }
     }
 }

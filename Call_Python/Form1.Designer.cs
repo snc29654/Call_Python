@@ -55,6 +55,9 @@ namespace Call_Python
             this.button13 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -307,11 +310,43 @@ namespace Call_Python
             this.label13.TabIndex = 25;
             this.label13.Text = "➡";
             // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(473, 244);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(111, 36);
+            this.button14.TabIndex = 26;
+            this.button14.Text = "mp4_to_jpg";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(627, 256);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(77, 15);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "MP4 JPG変換";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(609, 278);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(267, 60);
+            this.label15.TabIndex = 28;
+            this.label15.Text = "事前に\r\nC:\\github\\Call_Python\\Call_Python\\bin\\Debugに\r\nmp4jpgフォルダを作ってください\r\nそこにjpgファイル" +
+    "が格納されます";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 477);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.button14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button13);
@@ -374,6 +409,9 @@ namespace Call_Python
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }
 

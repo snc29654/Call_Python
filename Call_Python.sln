@@ -31,6 +31,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "button_jpg_back", "button_j
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "button_test", "button_test\button_test.pyproj", "{7B73DCB0-5AF2-4A8B-B8F9-23DA0957C68C}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "mp4_to_jpg", "mp4_to_jpg\mp4_to_jpg.pyproj", "{6CE02557-44AC-49E6-8DC2-6953F94B5ED2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,8 @@ Global
 		{71E107DC-CDE3-4E87-A8D3-0AC8F9D164B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B73DCB0-5AF2-4A8B-B8F9-23DA0957C68C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7B73DCB0-5AF2-4A8B-B8F9-23DA0957C68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE02557-44AC-49E6-8DC2-6953F94B5ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE02557-44AC-49E6-8DC2-6953F94B5ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
