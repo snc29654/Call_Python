@@ -51,6 +51,10 @@ namespace Call_Python
             this.label10 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -265,11 +269,53 @@ namespace Call_Python
             this.label11.TabIndex = 21;
             this.label11.Text = "4枚jpg自動再生";
             // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(472, 192);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(113, 30);
+            this.button12.TabIndex = 22;
+            this.button12.Text = "button_jpg_back";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(622, 192);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(111, 29);
+            this.button13.TabIndex = 23;
+            this.button13.Text = "button_test";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(742, 200);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(143, 15);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "jpgをhtmlボタン画像で表示";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(592, 199);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(19, 15);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "➡";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 477);
+            this.ClientSize = new System.Drawing.Size(897, 477);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.label10);
@@ -324,6 +370,10 @@ namespace Call_Python
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
 

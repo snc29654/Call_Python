@@ -114,5 +114,23 @@ namespace Call_Python
             Process.Start(pInfo);
 
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\button_jpg_back\button_jpg_back.py";
+            Process.Start(pInfo);
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\button_test\button_test.py";
+            Process.Start(pInfo);
+
+        }
     }
 }

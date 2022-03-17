@@ -27,6 +27,10 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "large_and_small", "large_an
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "select_jpg_disp_multi", "select_jpg_disp_multi\select_jpg_disp_multi.pyproj", "{5063507E-F1D3-416A-90AE-7CB5EA7CD7C5}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "button_jpg_back", "button_jpg_back\button_jpg_back.pyproj", "{71E107DC-CDE3-4E87-A8D3-0AC8F9D164B3}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "button_test", "button_test\button_test.pyproj", "{7B73DCB0-5AF2-4A8B-B8F9-23DA0957C68C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,10 @@ Global
 		{BD1031B8-65CC-47A5-B8A3-8881AEB5D33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5063507E-F1D3-416A-90AE-7CB5EA7CD7C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5063507E-F1D3-416A-90AE-7CB5EA7CD7C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71E107DC-CDE3-4E87-A8D3-0AC8F9D164B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71E107DC-CDE3-4E87-A8D3-0AC8F9D164B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B73DCB0-5AF2-4A8B-B8F9-23DA0957C68C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B73DCB0-5AF2-4A8B-B8F9-23DA0957C68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
