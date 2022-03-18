@@ -62,6 +62,8 @@ namespace Call_Python
             this.label16 = new System.Windows.Forms.Label();
             this.button16 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -381,11 +383,32 @@ namespace Call_Python
             this.label17.TabIndex = 32;
             this.label17.Text = "タイマー";
             // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(13, 464);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(130, 25);
+            this.button17.TabIndex = 33;
+            this.button17.Text = "sqlite_ejdict";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(172, 468);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(55, 15);
+            this.label18.TabIndex = 34;
+            this.label18.Text = "英和辞書";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 477);
+            this.ClientSize = new System.Drawing.Size(897, 525);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.button17);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.label16);
@@ -462,6 +485,8 @@ namespace Call_Python
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Label label18;
     }
 }
 

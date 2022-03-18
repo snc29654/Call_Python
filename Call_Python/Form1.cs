@@ -159,5 +159,14 @@ namespace Call_Python
             Process.Start(pInfo);
 
         }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\sqlite_ejdict\sqlite_ejdict.py";
+            Process.Start(pInfo);
+
+        }
     }
 }

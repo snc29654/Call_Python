@@ -37,6 +37,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "random_color1", "random_col
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "tkinter_timer", "tkinter_timer\tkinter_timer.pyproj", "{3C87D6FF-759E-433E-BDF6-601D811818F0}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "sqlite_ejdict", "sqlite_ejdict\sqlite_ejdict.pyproj", "{54D9383F-3CA3-408A-B408-B86D86BF437D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,8 @@ Global
 		{AB94725C-717F-45B8-AB59-AD600266B726}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C87D6FF-759E-433E-BDF6-601D811818F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3C87D6FF-759E-433E-BDF6-601D811818F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54D9383F-3CA3-408A-B408-B86D86BF437D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54D9383F-3CA3-408A-B408-B86D86BF437D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
