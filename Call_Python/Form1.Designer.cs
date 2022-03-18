@@ -64,6 +64,7 @@ namespace Call_Python
             this.label17 = new System.Windows.Forms.Label();
             this.button17 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -338,7 +339,7 @@ namespace Call_Python
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(609, 278);
+            this.label15.Location = new System.Drawing.Point(631, 278);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(267, 60);
             this.label15.TabIndex = 28;
@@ -402,17 +403,27 @@ namespace Call_Python
             this.label18.TabIndex = 34;
             this.label18.Text = "英和辞書";
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(172, 492);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(267, 45);
+            this.label19.TabIndex = 28;
+            this.label19.Text = "事前に\r\nC:\\github\\Call_Python\\Call_Python\\bin\\Debugに\r\nejdict.sqlite3をコピーしてください";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 525);
+            this.ClientSize = new System.Drawing.Size(921, 548);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.button15);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button14);
@@ -487,6 +498,7 @@ namespace Call_Python
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
     }
 }
 
