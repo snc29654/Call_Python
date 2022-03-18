@@ -141,5 +141,14 @@ namespace Call_Python
             Process.Start(pInfo);
 
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\random_color1\random_color1.py";
+            Process.Start(pInfo);
+
+        }
     }
 }

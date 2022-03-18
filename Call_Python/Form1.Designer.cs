@@ -58,6 +58,8 @@ namespace Call_Python
             this.button14 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.button15 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -257,9 +259,9 @@ namespace Call_Python
             // 
             this.button11.Location = new System.Drawing.Point(472, 135);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(114, 31);
+            this.button11.Size = new System.Drawing.Size(114, 38);
             this.button11.TabIndex = 20;
-            this.button11.Text = "select_jpg_disp_multi";
+            this.button11.Text = "select_jpg_disp\r\n_multi";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -339,11 +341,32 @@ namespace Call_Python
             this.label15.Text = "事前に\r\nC:\\github\\Call_Python\\Call_Python\\bin\\Debugに\r\nmp4jpgフォルダを作ってください\r\nそこにjpgファイル" +
     "が格納されます";
             // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(475, 361);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(110, 31);
+            this.button15.TabIndex = 29;
+            this.button15.Text = "random_color1";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(621, 370);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(79, 15);
+            this.label16.TabIndex = 30;
+            this.label16.Text = "カラフルCanvas";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 477);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.button15);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button14);
@@ -412,6 +435,8 @@ namespace Call_Python
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Label label16;
     }
 }
 
