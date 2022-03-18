@@ -150,5 +150,14 @@ namespace Call_Python
             Process.Start(pInfo);
 
         }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\tkinter_timer\tkinter_timer.py";
+            Process.Start(pInfo);
+
+        }
     }
 }

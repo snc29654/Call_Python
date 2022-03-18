@@ -60,6 +60,8 @@ namespace Call_Python
             this.label15 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
+            this.button16 = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -75,7 +77,7 @@ namespace Call_Python
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(13, 64);
+            this.button2.Location = new System.Drawing.Point(13, 70);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 33);
@@ -86,7 +88,7 @@ namespace Call_Python
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(15, 118);
+            this.button3.Location = new System.Drawing.Point(15, 128);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 32);
@@ -124,7 +126,7 @@ namespace Call_Python
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(15, 175);
+            this.button4.Location = new System.Drawing.Point(15, 185);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 33);
             this.button4.TabIndex = 6;
@@ -143,7 +145,7 @@ namespace Call_Python
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(15, 232);
+            this.button5.Location = new System.Drawing.Point(15, 243);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(130, 30);
             this.button5.TabIndex = 8;
@@ -162,7 +164,7 @@ namespace Call_Python
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(15, 296);
+            this.button6.Location = new System.Drawing.Point(15, 298);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(131, 31);
             this.button6.TabIndex = 10;
@@ -181,7 +183,7 @@ namespace Call_Python
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(14, 356);
+            this.button7.Location = new System.Drawing.Point(14, 354);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(129, 28);
             this.button7.TabIndex = 12;
@@ -200,7 +202,7 @@ namespace Call_Python
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(12, 409);
+            this.button8.Location = new System.Drawing.Point(12, 407);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(131, 27);
             this.button8.TabIndex = 14;
@@ -360,11 +362,32 @@ namespace Call_Python
             this.label16.TabIndex = 30;
             this.label16.Text = "カラフルCanvas";
             // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(474, 420);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(110, 30);
+            this.button16.TabIndex = 31;
+            this.button16.Text = "tkinter_timer";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(621, 427);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(42, 15);
+            this.label17.TabIndex = 32;
+            this.label17.Text = "タイマー";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 477);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.button16);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.label15);
@@ -437,6 +460,8 @@ namespace Call_Python
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Label label17;
     }
 }
 
