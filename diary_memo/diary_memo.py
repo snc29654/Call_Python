@@ -13,7 +13,7 @@ import jaconv
 
 import webbrowser
 
-webbrowser.open('C:\github\Call_Python\diary_memo\diary_memo.html')
+webbrowser.open('C:/github/Call_Python/diary_memo/diary_memo.html')
 
 
 dbname = '../database.db'
