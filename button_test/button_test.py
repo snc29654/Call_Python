@@ -4,7 +4,7 @@ from pyramid.response import Response
 import signal
 
 import webbrowser
-webbrowser.open('http://snc29654.html.xdomain.jp/pyramid_jpg_button/button_test.html')
+webbrowser.open('C:/github/Call_Python/button_test/button_test.html')
 
 dbname = '../database.db'
     
