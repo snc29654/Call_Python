@@ -63,8 +63,8 @@ def btn_click(key):
 
     textExample.insert(tkinter.END,data)
 # ボタン
-btn = tkinter.Button(root, text='引く', command=btn_click)
-btn.place(x=10, y=80)
+#btn = tkinter.Button(root, text='引く', command=btn_click)
+#btn.place(x=10, y=80)
 # 画面サイズ
 root.geometry('700x200')
 # 画面タイトル
