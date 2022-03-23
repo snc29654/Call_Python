@@ -168,5 +168,12 @@ namespace Call_Python
             Process.Start(pInfo);
 
         }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.ShowDialog(this);
+            f.Dispose();
+        }
     }
 }
