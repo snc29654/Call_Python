@@ -51,7 +51,7 @@ lbl3.place(x=10, y=10)
 # テキストボックス
 txt = tkinter.Entry(width=80)
 txt.place(x=90, y=10)
-txt.insert(tkinter.END,"")
+txt.insert(tkinter.END,"https://news.yahoo.co.jp/topics/top-picks")
 
 # 表示
 root.mainloop()
