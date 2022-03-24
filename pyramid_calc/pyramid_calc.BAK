@@ -1,59 +1,34 @@
-<!DOCtype html>
-<html lang="ja">
-<head>
-<title>Sample</title>
+<!DOCTYPE html>
+<HTML lang="ja">
+<HEAD>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="sample.css" type="text/css">
-</head>
-<body>
-  <script>
-  var today=new Date(); 
-
-  var year = today.getFullYear();
-  var month = today.getMonth()+1;
-  var week = today.getDay();
-  var day = today.getDate();
-  
-  var week_ja= new Array("日","月","火","水","木","金","土");
-  
-  document.write(year+"年"+month+"月"+day+"日 "+week_ja[week]+"曜日");
-</script>
-<b>ボタン写真</b>
-<br>
-<br>
+<META HTTP-EQuiv="Content-Type" Content="text/html; charset=Shift_JIS">
+<TITLE>Sample</TITLE>
+</HEAD>
+<BODY>
+<b>計算機</b>
+<BR>
+<BR>
   <table width=80%%>
-    <tr>
-      <td COLSPAN=2>
+    <TR>
+      <TD COLSPAN=2>
         <form method="post" action="http://localhost:6543">
-          <p>ボタン数設定：
-          <div>   横のボタン数     <input type="text" name="cols" value="80"> </div>
-          <div>   縦のボタン数     <input type="text" name="row" value="100"></div>
-          <p>色変換 R
-            <div>   変換前     <input type="text" name="before_r" value="0">例:01234567</div>
-            <div>   返還後     <input type="text" name="after_r" value="0">例：ffffffff</div>
+          <p>計算機への入力：
+          <div>   数値１ <input type="text" NAME="num1"> </div>
+          <div>   数値２ <input type="text" NAME="num2"></div>
+演算子:<select name="kind">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">×</option>
+        <option value="/">÷</option>
+      </select><br>
           </p>
-          <p>色変換 G
-            <div>   変換前     <input type="text" name="before_g" value="0">例:01234567</div>
-            <div>   返還後     <input type="text" name="after_g" value="0">例：ffffffff</div>
-          </p>
-          <p>色変換 B
-            <div>   変換前     <input type="text" name="before_b" value="0">例:01234567</div>
-            <div>   返還後     <input type="text" name="after_b" value="0">例：ffffffff</div>
-          </p>
-          <p><font color=#0000BB>予備：</font><br>
-            <textarea name="Contents" ROWS=1 COLS=50></textarea>
-            <br>
-          </p>
-            <input type="submit" value="登録">
-            <input type="reset" value="クリア">
-        </form>
-        <input type="date">
-      </td>
-    </tr>
-  </table>
-</center>
+            <input type="submit" VALUE="計算">
+            <input type="reset" VALUE="クリア">
+        </FORM>
+      </TD>
+    </TR>
+  </TABLE>
 <P>
-<center>
-</center>
-</body>
-</html>
+</BODY>
+​</HTML>
