@@ -7,6 +7,9 @@ textExample=tkinter.Text(root, height=40)
 textExample.pack()
 textExample.place(x=90, y=40)
   
+txt = tkinter.Entry(width=80)
+txt.place(x=90, y=10)
+txt.insert(tkinter.END,"")
   
 def  data_print():
     import requests
@@ -49,9 +52,53 @@ lbl3 = tkinter.Label(text='URL')
 lbl3.place(x=10, y=10)
 
 # テキストボックス
-txt = tkinter.Entry(width=80)
-txt.place(x=90, y=10)
-txt.insert(tkinter.END,"https://news.yahoo.co.jp/topics/top-picks")
 
 # 表示
+
+
+def change_fill():
+
+    # 現在選択されている項目のインデックスを取得
+    indices = listbox.curselection()
+
+    if len(indices) != 1:
+        # ２つ以上選択されているor１つも選択されていない
+        return
+
+    # 項目を取得
+    index = indices[0]
+    color = listbox.get(index)
+
+    # 取得した項目で長方形の色を変更
+    txt.delete(0, tkinter.END) 
+    txt.insert(tkinter.END,color)
+
+
+
+# リストボックスの作成と配置
+listbox = tkinter.Listbox(
+    root,
+    width=55, 
+    height=5
+)
+listbox.grid(row=20, column=10, padx=10, pady=10)
+
+
+# リストボックスに項目追加
+colors = [
+    "https://news.yahoo.co.jp/categories/entertainment", "https://news.yahoo.co.jp/categories/business", "https://news.yahoo.co.jp/topics/top-picks"
+]
+for color in colors:
+    listbox.insert(tkinter.END, color)
+
+# ボタンの作成と配置
+button = tkinter.Button(
+    root,
+    text="URLセット",
+    command=change_fill
+)
+button.grid(row=1, column=1, padx=10, pady=10)
+
+
+
 root.mainloop()
