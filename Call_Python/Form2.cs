@@ -24,5 +24,19 @@ namespace Call_Python
             Process.Start(pInfo);
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\pyramid_calc\pyramid_calc.py";
+            Process.Start(pInfo);
+
+        }
     }
 }
