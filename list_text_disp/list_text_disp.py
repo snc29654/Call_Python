@@ -24,12 +24,14 @@ from tkinter import filedialog as tkFileDialog
 import tkinter as tk
 from tkinter import font
 import tkinter.font as tkFont
+from chardet import detect 
         
 
 
 
 #最初の画面のクラス
 class image_gui():  
+    encode_type="utf-8"
     imgs = []
     def __init__(self, main):  
         self.index_before = 0
@@ -54,8 +56,11 @@ class image_gui():
 
         label4 = tkinter.Label(root_main, text="Fontサイズ", fg="red", bg="white", font=font1)
         label4.pack(side="top")
-        label4.place(x=400, y=28) 
+        label4.place(x=200, y=100) 
 
+        label5 = tkinter.Label(root_main, text="エンコード", fg="red", bg="white", font=font1)
+        label5.pack(side="top")
+        label5.place(x=200, y=60) 
 
     def key_handler(self,e):
     
@@ -66,8 +71,10 @@ class image_gui():
             pass
 
     def button1_clicked(self):  
-        
-        self.sizerate = txt4.get();
+        global encode_type
+        encode_type=combo.get()
+        self.font_size=combo1.get()
+        #self.sizerate = txt4.get();
 
         ini_dir = 'C:'
         ret = tkinter.filedialog.askdirectory(initialdir=ini_dir, title='file dialog test', mustexist = True)
@@ -79,8 +86,11 @@ class image_gui():
         self.quit()
 
     def button3_clicked(self):  
+        global encode_type
+        encode_type=combo.get()
+        self.font_size=combo1.get()
         
-        self.sizerate = txt4.get();
+        #self.sizerate = txt4.get();
 
 
         fTyp = [('', '*')] 
@@ -144,7 +154,7 @@ class image_gui():
 
 
 
-
+        #self.encode_type = encode_type
 
 
 
@@ -179,9 +189,29 @@ class image_gui():
 
 
 
-
         self.txt2.delete(0, tk.END)
         self.txt2.insert(tk.END,n)
+
+
+
+        self.txt6 = tk.Entry(width=20)
+        self.txt6.place(x=20, y=520)
+
+
+
+        self.txt6.delete(0, tk.END)
+        self.txt6.insert(tk.END,self.encode_type)
+
+
+        self.txt7 = tk.Entry(width=5)
+        self.txt7.place(x=20, y=540)
+
+
+
+        self.txt7.delete(0, tk.END)
+        self.txt7.insert(tk.END,self.font_size)
+
+
 
         txt3 = tk.Entry(width=50)
         txt3.place(x=20, y=20)
@@ -190,15 +220,22 @@ class image_gui():
                    height=10)
         self.text_box.pack()
         self.text_box.place(x=20, y=20)
-        fontExample = tkFont.Font(family="Courier", size=self.sizerate, weight="normal", slant="roman")
+        fontExample = tkFont.Font(family="Courier", size=self.font_size, weight="normal", slant="roman")
 
         self.text_box.configure(font=fontExample)
-
 
         #f = open(n, encoding="utf-8")
         #text_data = f.read()
 
-        with open(n,encoding="utf-8") as f:
+        with open(n, 'rb') as f:  # バイナリファイルとしてファイルをオープン
+            b = f.read()  # ファイルの内容を全て読み込む
+
+        enc = detect(b)
+        self.encode_type=enc['encoding']
+
+
+
+        with open(n,encoding=self.encode_type) as f:
 
 
             lines = f.readlines()
@@ -218,7 +255,7 @@ class image_gui():
         print(get_data)
         
         out_file=self.txt2.get()
-        fout_utf = open(out_file, 'w', encoding='utf-8')
+        fout_utf = open(out_file, 'w', encoding=self.encode_type)
  
         for row in get_data:
             fout_utf.write(row)
@@ -231,15 +268,46 @@ class image_gui():
 
 
 
+
 root_main= tkinter.Tk()  
 c=image_gui(root_main)  
 root_main.title("rootです")  
 root_main.geometry("850x300") 
 
 
-txt4 = tkinter.Entry(width=10)
-txt4.place(x=330, y=30)
-txt4.insert(tkinter.END,"10")
+#txt4 = tkinter.Entry(width=10)
+#txt4.place(x=330, y=100)
+#txt4.insert(tkinter.END,"10")
+
+combo = ttk.Combobox(root_main, state='readonly')
+# リストの値を設定
+combo["values"] = ("utf-8","shift_jis","euc_jp")
+# デフォルトの値を食費(index=0)に設定
+combo.current(0)
+# コンボボックスの配置
+combo.place(x=50, y=60)
+#combo.pack()
+
+combo1 = ttk.Combobox(root_main, state='readonly')
+# リストの値を設定
+combo1["values"] = (8,9,10,11,12,14,16,18,20)
+# デフォルトの値を食費(index=0)に設定
+combo1.current(0)
+# コンボボックスの配置
+combo1.place(x=50, y=100)
+#combo1.pack()
+
+
+# ボタンの作成（コールバックコマンドには、コンボボックスの値を取得しprintする処理を定義）
+#button = tk.Button(text="表示",command=lambda:print(combo.get()))
+
+#button10 = Button(root_main, text=u'エンコードセット', command=button10_clicked)  
+#button10.place(x=50, y=50) 
+
+
+
+# ボタンの配置
+#button.pack()
 
 
 root_main.mainloop()
