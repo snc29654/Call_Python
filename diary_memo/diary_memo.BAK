@@ -53,6 +53,9 @@
             <select name="scrapeaction" id="scrapeaction">
             <option value="https://news.yahoo.co.jp/topics/top-picks">yahooトップ</option>
             <option value="https://news.yahoo.co.jp/categories/entertainment">yahooエンタメ</option>
+            <option value="https://news.yahoo.co.jp/categories/sports">yahooスポーツ</option>
+            <option value="https://news.yahoo.co.jp/categories/business">yahoo　経済</option>
+            <option value="https://news.yahoo.co.jp/categories/it">yahoo　IT</option>
             </select>
 
 
