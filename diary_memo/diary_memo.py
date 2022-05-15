@@ -88,7 +88,12 @@ def diary_world(request):
             #これはpythonでのサポート機能のようで、多量のレコードを一気に登録するときに役立つようです
             c.executemany(insert_sql, users)
         elif action == "scrape":#スクレいピング
-            scraping_url = in_data["scraping_url"]
+
+            if (in_data["scraping_url"]==""):
+                scraping_url = in_data["scrapeaction"]
+            else:
+                scraping_url = in_data["scraping_url"]
+
 
             if kind =="未入力":
                 kind = scraping_url
