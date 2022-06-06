@@ -1,4 +1,4 @@
- ### インポート
+### インポート
 import tkinter
 import glob
 from tkinter import *
@@ -26,6 +26,7 @@ from tkinter import font
 import cv2
 import threading
 import webbrowser
+import os
 
 
         
@@ -67,9 +68,9 @@ class image_gui(ttk.Combobox):
         button6.grid(row=0, column=1)  
         button6.place(x=250, y=10) 
 
-        button8= Button(root_main, text=u'ヘルプ', command=self.button8_clicked)  
+        button8= Button(root_main, text=u'web表示', command=self.button8_clicked)  
         button8.grid(row=0, column=1)  
-        button8.place(x=250, y=170) 
+        button8.place(x=10, y=170) 
 
 
 
@@ -203,9 +204,42 @@ class image_gui(ttk.Combobox):
         root_main.destroy()
 
     def button8_clicked(self):  
-       
+        SAMPLE_DIR = "C:\\html_link"
+ 
+        if not os.path.exists(SAMPLE_DIR):
+        # ディレクトリが存在しない場合、ディレクトリを作成する
+            os.makedirs(SAMPLE_DIR)       
 
-        webbrowser.open('https://plaza.rakuten.co.jp/kyoyoukun/diary/202201060000/')
+        f = open("C:\\html_link\\web.html", 'w')
+
+
+        datalist = []
+        datalist.append('<!DOCTYPE html>\n')
+        datalist.append('<html>\n')
+        datalist.append('<head>\n')
+        datalist.append('<title> 画像表示 </title>\n')  
+        for file in self.filenames:
+            datalist.append('<video controls width=300 src =  ')
+            datalist.append(file)  
+            datalist.append('  ></video>\n')  
+            datalist.append('<a href =')
+            datalist.append(file)
+            datalist.append(' target = \"_blank\">▼</a>\n')
+            
+        datalist.append('</head>\n')
+        datalist.append('<body>\n')
+   
+        
+        
+        datalist.append('</body>\n')
+        f.writelines(datalist)
+
+        f.close()
+
+
+
+        webbrowser.open('C:/html_link/web.html')
+
 
 
 
