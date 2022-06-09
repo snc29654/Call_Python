@@ -1,6 +1,12 @@
 import tkinter
 import requests
 from bs4 import BeautifulSoup
+import webbrowser
+import os
+import sys
+
+
+
 
 root = tkinter.Tk()
 textExample=tkinter.Text(root, height=40)
@@ -18,6 +24,35 @@ def  data_print():
     site = requests.get(get_url)
     data = BeautifulSoup(site.text, 'html.parser')
     textExample.insert(tkinter.END,data.find_all("p"))
+
+    SAMPLE_DIR = "C:\\html_link"
+ 
+    if not os.path.exists(SAMPLE_DIR):
+    # ディレクトリが存在しない場合、ディレクトリを作成する
+        os.makedirs(SAMPLE_DIR)       
+
+    web_site=SAMPLE_DIR+"\\scraping_result.html"
+    f = open(web_site, 'w')
+    message=str(data.find_all("a"))
+
+    datalist = []
+
+
+    datalist.append('<html>\n')
+    datalist.append('<head>\n')
+    datalist.append('<title>from python</title>\n')
+    datalist.append('</head>\n')
+    datalist.append('<body>\n')
+    datalist.append(message)
+    datalist.append('\n')
+    datalist.append('</body>\n')
+    datalist.append('</html>\n')
+
+    f.writelines(datalist)
+
+    f.close()
+    webbrowser.open(web_site)
+
        
       
 # clickイベント
@@ -28,6 +63,10 @@ def btn_click():
 def btn_click6():
     
     textExample.delete("1.0",tkinter.END)
+
+
+
+
 
 # ボタン
 btn = tkinter.Button(root, text='実行', command=btn_click)
@@ -86,7 +125,11 @@ listbox.grid(row=20, column=10, padx=10, pady=10)
 
 # リストボックスに項目追加
 colors = [
-    "https://news.yahoo.co.jp/categories/entertainment", "https://news.yahoo.co.jp/categories/business", "https://news.yahoo.co.jp/topics/top-picks"
+    "https://news.yahoo.co.jp/categories/domestic",
+    "https://news.yahoo.co.jp/categories/sports",
+    "https://news.yahoo.co.jp/categories/entertainment", 
+    "https://news.yahoo.co.jp/categories/business", 
+    "https://news.yahoo.co.jp/topics/top-picks"
 ]
 for color in colors:
     listbox.insert(tkinter.END, color)
