@@ -32,7 +32,7 @@ def  data_print():
         os.makedirs(SAMPLE_DIR)       
 
     web_site=SAMPLE_DIR+"\\scraping_result.html"
-    f = open(web_site, 'w')
+    f = open(web_site, 'w',encoding='utf-8', errors='ignore')
     message=str(data.find_all("a"))
 
     datalist = []
