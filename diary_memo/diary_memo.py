@@ -178,7 +178,7 @@ def diary_world(request):
             print(str(data))
         except:
             print("data not found")
-    if action == "scrape":        
+    if ((action == "scrape") or (action=="web")):        
         return Response(str(Contents))
     else:
         return Response(str(data))
