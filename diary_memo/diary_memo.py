@@ -87,6 +87,29 @@ def diary_world(request):
             #この場合登録一件ですから、excutemanyでなくてもいいかも？
             #これはpythonでのサポート機能のようで、多量のレコードを一気に登録するときに役立つようです
             c.executemany(insert_sql, users)
+        elif action == "web":#web表示
+
+            if (in_data["scraping_url"]==""):
+                scraping_url = in_data["scrapeaction"]
+            else:
+                scraping_url = in_data["scraping_url"]
+
+
+            if kind =="未入力":
+                kind = scraping_url
+
+            print(scraping_url)
+
+            webbrowser.open(scraping_url)
+
+            scraping_contents=data_print(scraping_url)
+            Contents = str(scraping_contents)
+            print(Contents)
+            insert_sql = 'insert into users (date, name, weather, kind, Contents) values (?,?,?,?,?)'
+            users = [
+            (date, name, weather, kind, Contents)
+            ]
+            c.executemany(insert_sql, users)
         elif action == "scrape":#スクレいピング
 
             if (in_data["scraping_url"]==""):
