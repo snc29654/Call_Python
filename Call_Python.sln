@@ -45,6 +45,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "pyramid_calc", "pyramid_cal
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "list_text_disp", "list_text_disp\list_text_disp.pyproj", "{05B0BD15-CFFE-4143-BC05-17BEC2049694}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "web_search", "web_search\web_search.pyproj", "{60D6AE9E-C999-4F5F-B473-4BD59C42938B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,8 @@ Global
 		{58E5306C-C53D-42BD-9B41-1DBE40DFB33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05B0BD15-CFFE-4143-BC05-17BEC2049694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{05B0BD15-CFFE-4143-BC05-17BEC2049694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60D6AE9E-C999-4F5F-B473-4BD59C42938B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60D6AE9E-C999-4F5F-B473-4BD59C42938B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,86 @@
+<!DOCtype html>
+<html lang="ja">
+<head>
+<title>Sample</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="sample.css" type="text/css">
+</head>
+<body>
+<b>ネット検索</b>
+<br>
+<br>
+  <table width=80%%>
+    <tr>
+      <td COLSPAN=2>
+        <form method="post" target="_blank" action="http://localhost:6543">
+          <p>：
+          <div>       <input type="hidden" type="text" name="date"> </div>
+          <div>       <input type="hidden" type="text" name="name"></div>
+          <div>       <input type="hidden" type="text" name="weather"></div>
+          <div>   指定キー（このキーのみ表示） <input type="text" name="match_key"></div>
+          <div>   検索ワード（内容から検索） <input type="text" name="match_word"></div>
+          <div>   削除キー <input id="ex_box" input type="text" name="delkey" disabled /></div>
+          <div>   <input type="hidden" size="50" name="scraping_url" value=""></div>
+          <div>   ニュースキーワード <input type="text" size="20" name="zip_code" value="MLB"></div>
+            <br>
+          </p>
+            <select name="action" id="action">
+            <option value="scrape">yahoo search</option>
+            <option value="view">全表示</option>
+            <option value="add">追加登録</option>
+            <option value="delete">指定キー削除</option>
+            <option value="srch">検索ワード表示</option>
+            <option value="count">検索ワード件数</option>
+            <option value="today">本日登録分表示</option>
+            <option value="keyview">指定キー表示</option>
+            <option value="kindview">題名検索</option>
+            <option value="lastview">最後のレコード</option>
+            <option value="delall">全削除</option>
+            </select>
+
+
+            <select name="scrapeaction" id="scrapeaction">
+            <option value="http://search.yahoo.co.jp/search">yahoo検索</option>
+            </select>
+
+
+            <select name="action2" id="action2">
+              <option value="all">内容含み</option>
+              <option value="select">題名のみ</option>
+              </select>
+              <script>
+              document.getElementById("action").addEventListener("change", function(){
+              var age_elem = document.getElementById("action");
+              var s_value = age_elem.options[age_elem.selectedIndex].value;
+              var box_elem = document.getElementById("ex_box");
+              if(s_value == "delete"){
+                box_elem.disabled = false;
+              } else{
+                box_elem.disabled = true;
+              }
+
+              if(s_value == "delall"){
+                alert('全レコード削除を選択します');
+              }
+
+
+            }, false);
+
+            </script>
+          <div>        <input type="hidden" type="text" name="kind"></div>
+          <p><font color=#0000BB></font><br>
+            <textarea style="display:none" name="Contents" ROWS=10 COLS=50></textarea>
+            <br>
+          </p>
+            <input type="submit" value="実行">
+            <input type="reset" value="クリア">
+        </form>
+      </td>
+    </tr>
+  </table>
+</center>
+<P>
+<center>
+</center>
+</body>
+</html>
