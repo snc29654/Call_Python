@@ -39,7 +39,16 @@ def  data_print(url):
     return(data)
 
 
+def  data_print2(url):
 
+    global zip_code
+
+    params = {'q': zip_code, 'tbm': 'nws'}
+
+    r = requests.get('https://www.google.co.jp/search', params=params)
+
+    data = BeautifulSoup(r.content, 'html.parser')
+    return(data)
 
 
     
@@ -126,6 +135,29 @@ def diary_world(request):
             (date, name, weather, kind, zip_code,Contents)
             ]
             c.executemany(insert_sql, users)
+
+        elif action == "news":#google news
+
+            if (in_data["scraping_url"]==""):
+                scraping_url = in_data["scrapeaction"]
+            else:
+                scraping_url = in_data["scraping_url"]
+
+
+            if kind =="未入力":
+                kind = scraping_url
+
+            print("●●●●●●●●●●●●●●●●●●●●●●●●●")
+            print(scraping_url)
+            scraping_contents=data_print2(scraping_url)
+            Contents = str(scraping_contents)
+            print(Contents)
+            insert_sql = 'insert into users (date, name, weather, kind, zip_code,Contents) values (?,?,?,?,?,?)'
+            users = [
+            (date, name, weather, kind, zip_code,Contents)
+            ]
+            c.executemany(insert_sql, users)
+
         elif action == "delete":#削除
             #キー指定して削除する
             select_sql = 'delete  from users where id ='+ str(delkey)
@@ -173,7 +205,7 @@ def diary_world(request):
             print(str(data))
         except:
             print("data not found")
-    if action == "scrape":        
+    if ((action == "scrape") or(action == "news")):        
         return Response(str(Contents))
     else:
         return Response(str(data))

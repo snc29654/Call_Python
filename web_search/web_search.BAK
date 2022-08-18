@@ -41,7 +41,7 @@
 
 
             <select name="scrapeaction" id="scrapeaction">
-            <option value="http://search.yahoo.co.jp/search">インターネット検索</option>
+            <option value="http://search.yahoo.co.jp/search">yahoo検索</option>
             </select>
 
 
