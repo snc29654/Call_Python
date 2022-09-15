@@ -56,5 +56,14 @@ namespace Call_Python
             Process.Start(pInfo);
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\pdf_to_text\pdf_to_text.py";
+            Process.Start(pInfo);
+
+        }
     }
 }
