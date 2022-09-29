@@ -65,5 +65,14 @@ namespace Call_Python
             Process.Start(pInfo);
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo pInfo = new ProcessStartInfo();
+            pInfo.FileName = "python";
+            pInfo.Arguments = @"C:\github\Call_python\thread_scroll_text\thread_scroll_text.py";
+            Process.Start(pInfo);
+
+        }
     }
 }
