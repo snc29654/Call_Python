@@ -43,7 +43,7 @@ class main_class():
         button1= Button(root, text=u'終了', command=self.quit)  
         button1.grid(row=0, column=1)  
         button1.place(x=600, y=30) 
-        self.textExample=ScrolledText(root, height=30,width=120, wrap=tkinter.CHAR)
+        self.textExample=ScrolledText(root, wrap=tkinter.CHAR)
         self.textExample.pack()
         self.textExample.place(x=90, y=70)
         self.textExample.configure(font=("Courier", self.font))
