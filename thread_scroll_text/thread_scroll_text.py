@@ -39,13 +39,16 @@ class main_class():
         print ("__init__")  
         self.interval=0.5
         self.kill = 0
-
+        self.font=10
         button1= Button(root, text=u'終了', command=self.quit)  
         button1.grid(row=0, column=1)  
         button1.place(x=600, y=30) 
         self.textExample=ScrolledText(root, height=30,width=120, wrap=tkinter.CHAR)
         self.textExample.pack()
         self.textExample.place(x=90, y=70)
+        self.textExample.configure(font=("Courier", self.font))
+
+
 
         button3= Button(root, text=u'ファイル   選択', command=self.button3_clicked) 
         button3.grid(row=0, column=1)  
@@ -66,6 +69,15 @@ class main_class():
         button6= Button(root, text=u'早く', command=self.button6_clicked)  
         button6.grid(row=0, column=1)  
         button6.place(x=400, y=30) 
+
+        button8= Button(root, text=u'フォント大', command=self.button8_clicked)  
+        button8.grid(row=0, column=1)  
+        button8.place(x=450, y=30) 
+
+        button9= Button(root, text=u'フォント小', command=self.button9_clicked)  
+        button9.grid(row=0, column=1)  
+        button9.place(x=520, y=30) 
+
 
     def method0(self,message):  
         print ("method0")  
@@ -124,6 +136,7 @@ class main_class():
 
                         print(line, end='')
                         self.textExample.insert(tkinter.END,str(line)+"\n")
+                        self.textExample.configure(font=("Courier", self.font))
                         time.sleep(self.interval)
                         self.textExample.yview_moveto(1)
 
@@ -154,6 +167,12 @@ class main_class():
     def button6_clicked(self):
         if( self.interval > 0.1):
             self.interval=self.interval - 0.1  
+    def button8_clicked(self):
+            self.font=self.font + 1  
+ 
+    def button9_clicked(self):
+        if( self.font > 8):
+            self.font=self.font - 1  
 
 
     def quit(self):
@@ -163,7 +182,7 @@ class main_class():
 root= tkinter.Tk()  
 c=main_class(root)  
 root.title("テキストスクロール")  
-root.geometry("1000x500") 
+root.geometry("1100x600") 
 
 
 root.mainloop()
