@@ -36,17 +36,18 @@ from chardet import detect
 
 class main_class():  
     def __init__(self, main):
+        self.h=30
+        self.w=100
         print ("__init__")  
         self.interval=0.5
         self.kill = 0
         self.font=10
         button1= Button(root, text=u'終了', command=self.quit)  
         button1.grid(row=0, column=1)  
-        button1.place(x=600, y=30) 
-        self.textExample=ScrolledText(root, wrap=tkinter.CHAR)
+        button1.place(x=800, y=30) 
+        self.textExample=ScrolledText(root, width=self.w,height=self.h, wrap=tkinter.CHAR)
         self.textExample.pack()
         self.textExample.place(x=90, y=70)
-        self.textExample.configure(font=("Courier", self.font))
 
 
 
@@ -77,6 +78,14 @@ class main_class():
         button9= Button(root, text=u'フォント小', command=self.button9_clicked)  
         button9.grid(row=0, column=1)  
         button9.place(x=520, y=30) 
+
+        button10= Button(root, text=u'枠大', command=self.button10_clicked)  
+        button10.grid(row=0, column=1)  
+        button10.place(x=600, y=30) 
+
+        button11= Button(root, text=u'枠小', command=self.button11_clicked)  
+        button11.grid(row=0, column=1)  
+        button11.place(x=650, y=30) 
 
 
     def method0(self,message):  
@@ -136,7 +145,7 @@ class main_class():
 
                         print(line, end='')
                         self.textExample.insert(tkinter.END,str(line)+"\n")
-                        self.textExample.configure(font=("Courier", self.font))
+                        self.textExample.configure(font=("Courier", self.font),height=self.h,width=self.w)
                         time.sleep(self.interval)
                         self.textExample.yview_moveto(1)
 
@@ -173,6 +182,15 @@ class main_class():
     def button9_clicked(self):
         if( self.font > 8):
             self.font=self.font - 1  
+
+
+    def button10_clicked(self):
+        self.w=self.w + 2  
+        self.h=self.h + 1  
+
+    def button11_clicked(self):
+        self.w=self.w - 2  
+        self.h=self.h - 1  
 
 
     def quit(self):
