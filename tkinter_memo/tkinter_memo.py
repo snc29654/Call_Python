@@ -109,7 +109,8 @@ def btn_click10():
                 print(row)
                 print(type(row))
                 text = "-".join(map(str, row))
-                if combovalue =='header':
+                if(px_v.get()==2):
+                #if combovalue =='header':
                     text=text[:80]
 
                 print(text)
@@ -378,7 +379,7 @@ btn11.place(x=10, y=360)
 
 
 # 画面サイズ
-root.geometry('1000x750')
+root.geometry('1000x700')
 # 画面タイトル
 root.title('メモデータベース')
 
@@ -412,13 +413,12 @@ txt_url.insert(tkinter.END,"")
 
 
 #root = tkinter.Tk()
-
+"""
 item_list = ['all', 'header']
 test_combobox = ttk.Combobox(
     master=root,
     values=item_list,
     )
-
 #値選択時に発生するイベントと関数を紐づけ
 test_combobox.bind(
     '<<ComboboxSelected>>',     #選択時に発生するイベント
@@ -427,7 +427,26 @@ test_combobox.bind(
 
 test_combobox.current(0)
 test_combobox.pack()
+"""
 
+px_v = tkinter.IntVar(value=1)
+
+
+px_radio_1 = tkinter.Radiobutton(
+    root,
+    text="全て",
+    value=1,
+    variable=px_v
+)
+px_radio_1.place(x=700, y=30)
+
+px_radio_2 = tkinter.Radiobutton(
+    root,
+    text="ヘッダーのみ",
+    value=2,
+    variable=px_v
+)
+px_radio_2.place(x=800, y=30)
 
 
 # 表示
