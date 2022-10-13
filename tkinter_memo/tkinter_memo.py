@@ -11,6 +11,12 @@ import requests
 from bs4 import BeautifulSoup
 
 from tkinter import ttk
+
+import webbrowser
+import os
+
+
+
 dbname = '../memo.db'
 
 fontsize =10
@@ -50,6 +56,10 @@ def execute():
         btn_click2_sc()
     if(func==7):
         btn_click5()
+
+def textclear():
+    textExample.delete("1.0",tkinter.END)
+
 
     
 def btn_click6():
@@ -240,6 +250,34 @@ def  data_print():
     site = requests.get(get_url)
     data = BeautifulSoup(site.text, 'html.parser')
     textExample.insert(tkinter.END,data.find_all("p"))
+    SAMPLE_DIR = "C:\\html_link"
+ 
+    if not os.path.exists(SAMPLE_DIR):
+    # ディレクトリが存在しない場合、ディレクトリを作成する
+        os.makedirs(SAMPLE_DIR)       
+
+    web_site=SAMPLE_DIR+"\\scraping_result.html"
+    f = open(web_site, 'w',encoding='utf-8', errors='ignore')
+    message=str(data.find_all("a"))
+
+    datalist = []
+
+
+    datalist.append('<html>\n')
+    datalist.append('<head>\n')
+    datalist.append('<title>from python</title>\n')
+    datalist.append('</head>\n')
+    datalist.append('<body>\n')
+    datalist.append(message)
+    datalist.append('\n')
+    datalist.append('</body>\n')
+    datalist.append('</html>\n')
+
+    f.writelines(datalist)
+
+    f.close()
+    webbrowser.open(web_site)
+
 
 def btn_click2_sc():
     txt.delete(0,tkinter.END)
@@ -528,6 +566,8 @@ func_radio_7.place(x=700, y=180)
 btn12 = tkinter.Button(root, text='実行', command=execute)
 btn12.place(x=700, y=250)
 
+btn13 = tkinter.Button(root, text='クリア', command=textclear)
+btn13.place(x=700, y=300)
 
 # 表示
 root.mainloop()
