@@ -51,6 +51,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "pdf_to_text", "pdf_to_text\
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "thread_scroll_text", "thread_scroll_text\thread_scroll_text.pyproj", "{55ACA706-D0B5-4E29-B131-1885BC7BC178}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "multi_scraping", "multi_scraping\multi_scraping.pyproj", "{DBF4BF59-CA0C-420C-9656-141D66DA445C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +109,8 @@ Global
 		{3233ED01-A8B5-40C5-B4E4-A2C12BDDC14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55ACA706-D0B5-4E29-B131-1885BC7BC178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{55ACA706-D0B5-4E29-B131-1885BC7BC178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF4BF59-CA0C-420C-9656-141D66DA445C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF4BF59-CA0C-420C-9656-141D66DA445C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

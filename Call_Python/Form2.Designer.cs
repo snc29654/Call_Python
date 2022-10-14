@@ -41,6 +41,8 @@ namespace Call_Python
             this.label5 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -159,11 +161,32 @@ namespace Call_Python
             this.label6.TabIndex = 11;
             this.label6.Text = "テキスト自動スクロール";
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(359, 89);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(116, 33);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "multi_scraping";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(503, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(94, 15);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "複数スクレイピング";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 445);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label5);
@@ -199,5 +222,7 @@ namespace Call_Python
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label7;
     }
 }
