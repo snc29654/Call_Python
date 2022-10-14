@@ -104,6 +104,7 @@ def btn_click():
                 text2="".join(map(str, data))
                 data.append("----------------------------------------------------------------\n")
             conn.commit()
+            web_out(text2)
 
         except:
 
@@ -149,6 +150,8 @@ def btn_click10():
                 data.append("----------------------------------------------------------------\n")
             conn.commit()
 
+            web_out(text2)
+            
         except:
 
             print("data exception")
@@ -160,6 +163,43 @@ def btn_click10():
 
     return data_exist
 combovalue = "all"
+
+
+def web_out(message):
+    
+    SAMPLE_DIR = "C:\\html_link"
+
+    if not os.path.exists(SAMPLE_DIR):
+    # ディレクトリが存在しない場合、ディレクトリを作成する
+        os.makedirs(SAMPLE_DIR)       
+
+    web_site=SAMPLE_DIR+"\\scraping_result.html"
+    f = open(web_site, 'w',encoding='utf-8', errors='ignore')
+    message=str(message)
+
+    datalist = []
+
+
+    datalist.append('<html>\n')
+    datalist.append('<head>\n')
+    datalist.append('<title>from python</title>\n')
+    datalist.append('</head>\n')
+    datalist.append('<body>\n')
+    datalist.append(message)
+    datalist.append('\n')
+    datalist.append('</body>\n')
+    datalist.append('</html>\n')
+
+    f.writelines(datalist)
+
+    f.close()
+    webbrowser.open(web_site)
+
+
+
+    
+
+
 def show_selected(event):       #eventを引数に
     global combovalue
     combovalue=test_combobox.get()
@@ -196,7 +236,7 @@ def btn_click8():
                 text2="".join(map(str, data))
                 data.append("----------------------------------------------------------------\n")
             conn.commit()
-
+            web_out(text2)
         except:
 
             print("data exception")
@@ -260,24 +300,7 @@ def  data_print():
     f = open(web_site, 'w',encoding='utf-8', errors='ignore')
     message=str(data.find_all("a"))
 
-    datalist = []
-
-
-    datalist.append('<html>\n')
-    datalist.append('<head>\n')
-    datalist.append('<title>from python</title>\n')
-    datalist.append('</head>\n')
-    datalist.append('<body>\n')
-    datalist.append(message)
-    datalist.append('\n')
-    datalist.append('</body>\n')
-    datalist.append('</html>\n')
-
-    f.writelines(datalist)
-
-    f.close()
-    webbrowser.open(web_site)
-
+    web_out(message)
 
 def btn_click2_sc():
     txt.delete(0,tkinter.END)
