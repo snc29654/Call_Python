@@ -4,82 +4,88 @@ from bs4 import BeautifulSoup
 import webbrowser
 import os
 import sys
+from tkinter.scrolledtext import ScrolledText
+
+
+
+  
+  
+class main_class():  
+    def __init__(self,main):
+        # ボタン
+        btn = tkinter.Button(root, text='実行', command=self.btn_click)
+        btn.place(x=10, y=80)
+
+        btn6 = tkinter.Button(root, text='入力クリア', command=self.btn_click6)
+        btn6.place(x=10, y=570)
+
+  
+  
+    def  data_print(self):
+        import requests
+        message=[]
+        datalist = []
+        for url in urls:
+
+
+            site = requests.get(url)
+            data = BeautifulSoup(site.text, 'html.parser')
+            textExample.insert(tkinter.END,data.find_all("p"))
+
+            SAMPLE_DIR = "C:\\html_link"
+ 
+            if not os.path.exists(SAMPLE_DIR):
+            # ディレクトリが存在しない場合、ディレクトリを作成する
+                os.makedirs(SAMPLE_DIR)       
+
+            web_site=SAMPLE_DIR+"\\scraping_result.html"
+            f = open(web_site, 'w',encoding='utf-8', errors='ignore')
+            message = str(data.find_all("a"))
+
+
+
+            datalist.append('<html>\n')
+            datalist.append('<head>\n')
+            datalist.append('<title>from python</title>\n')
+            datalist.append('</head>\n')
+            datalist.append('<body>\n')
+            datalist.append(message)
+            datalist.append('\n')
+            datalist.append('</body>\n')
+            datalist.append('</html>\n')
+
+        f.writelines(datalist)
+
+        f.close()
+        webbrowser.open(web_site)
+
+       
+      
+# clickイベント
+    def btn_click(self):
+        textExample.delete("1.0",tkinter.END)
+        self.data_print()
+    
+    def btn_click6(self):
+    
+        textExample.delete("1.0",tkinter.END)
+
 
 
 
 
 root = tkinter.Tk()
-textExample=tkinter.Text(root, height=40)
-textExample.pack()
-textExample.place(x=90, y=40)
-  
-  
-def  data_print():
-    import requests
-    message=[]
-    datalist = []
-    for url in urls:
-
-
-        site = requests.get(url)
-        data = BeautifulSoup(site.text, 'html.parser')
-        textExample.insert(tkinter.END,data.find_all("p"))
-
-        SAMPLE_DIR = "C:\\html_link"
- 
-        if not os.path.exists(SAMPLE_DIR):
-        # ディレクトリが存在しない場合、ディレクトリを作成する
-            os.makedirs(SAMPLE_DIR)       
-
-        web_site=SAMPLE_DIR+"\\scraping_result.html"
-        f = open(web_site, 'w',encoding='utf-8', errors='ignore')
-        message = str(data.find_all("a"))
-
-
-
-        datalist.append('<html>\n')
-        datalist.append('<head>\n')
-        datalist.append('<title>from python</title>\n')
-        datalist.append('</head>\n')
-        datalist.append('<body>\n')
-        datalist.append(message)
-        datalist.append('\n')
-        datalist.append('</body>\n')
-        datalist.append('</html>\n')
-
-    f.writelines(datalist)
-
-    f.close()
-    webbrowser.open(web_site)
-
-       
-      
-# clickイベント
-def btn_click():
-    textExample.delete("1.0",tkinter.END)
-    data_print()
-    
-def btn_click6():
-    
-    textExample.delete("1.0",tkinter.END)
-
-
-
-
-
-# ボタン
-btn = tkinter.Button(root, text='実行', command=btn_click)
-btn.place(x=10, y=80)
-
-btn6 = tkinter.Button(root, text='入力クリア', command=btn_click6)
-btn6.place(x=10, y=570)
-
-
-
 # 画面サイズ
 root.geometry('700x600')
 # 画面タイトル
 root.title('スクレいピング')
+
+
+textExample=ScrolledText(root, height=40,wrap=tkinter.CHAR)
+textExample.pack()
+textExample.place(x=90, y=40)
+
+
 # ラベル
 lbl = tkinter.Label(text='')
 lbl.place(x=10, y=10)
@@ -101,5 +107,6 @@ urls = [
     "https://news.yahoo.co.jp/topics/top-picks"
 ]
 
+c=main_class(root)  
 
 root.mainloop()
