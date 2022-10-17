@@ -11,7 +11,7 @@ from tkinter.scrolledtext import ScrolledText
   
   
 class main_class():  
-    def __init__(self,main):
+    def __init__(self):
         # ボタン
         btn = tkinter.Button(root, text='実行', command=self.btn_click)
         btn.place(x=10, y=80)
@@ -107,6 +107,6 @@ urls = [
     "https://news.yahoo.co.jp/topics/top-picks"
 ]
 
-c=main_class(root)  
+c=main_class()  
 
 root.mainloop()
