@@ -28,7 +28,7 @@ class top_app():
         self.khit=0
         self.state = 0
         self.hit_count=0
-        self.stop=0
+        self.stop=1
         self.hit=[0,1,2,3,4,5,6,7,8,9]
         self.state = 0
         self.kstate = 0
@@ -138,11 +138,106 @@ class top_app():
     def make_target2(self):
         for i in range(TARGET_COUNT):
             if(self.hit[i]==0):
-                pygame.draw.circle(self.main_surface, (0,0,255), (self.x[i], self.y[i]), self.target_size)
-                pygame.draw.circle(self.main_surface, (255,0,0), (self.x[i]-8, self.y[i]-8), self.target_size)
-                pygame.draw.circle(self.main_surface, (255,0,0), (self.x[i]-8, self.y[i]+8), self.target_size)
-                pygame.draw.circle(self.main_surface, (255,0,0), (self.x[i]+8, self.y[i]-8), self.target_size)
-                pygame.draw.circle(self.main_surface, (255,0,0), (self.x[i]+8, self.y[i]+8), self.target_size)
+                pygame.draw.rect(self.main_surface,(247, 247, 247) , (self.x[i]+0*5, self.y[i],5,5))
+                pygame.draw.rect(self.main_surface,(246, 247, 249) , (self.x[i]+1*5, self.y[i],5,5))
+                pygame.draw.rect(self.main_surface,(255, 243, 253) , (self.x[i]+2*5, self.y[i],5,5))
+                pygame.draw.rect(self.main_surface,(235, 195, 46) , (self.x[i]+3*5, self.y[i],5,5))
+                pygame.draw.rect(self.main_surface,(240, 219, 68) , (self.x[i]+4*5, self.y[i],5,5))
+                pygame.draw.rect(self.main_surface,(243, 213, 67) , (self.x[i]+5*5, self.y[i],5,5))
+                pygame.draw.rect(self.main_surface,(245, 210, 64) , (self.x[i]+6*5, self.y[i],5,5))
+                pygame.draw.rect(self.main_surface,(227, 181, 36) , (self.x[i]+7*5, self.y[i],5,5))
+                pygame.draw.rect(self.main_surface,(233, 218, 161) , (self.x[i]+8*5, self.y[i],5,5))
+                pygame.draw.rect(self.main_surface,(246, 246, 244) , (self.x[i]+9*5, self.y[i],5,5))
+                pygame.draw.rect(self.main_surface,(248, 246, 247) , (self.x[i]+0*5, self.y[i]+10/2,5,5))
+                pygame.draw.rect(self.main_surface,(245, 245, 243) , (self.x[i]+1*5, self.y[i]+10/2,5,5))
+                pygame.draw.rect(self.main_surface,(234, 191, 50) , (self.x[i]+2*5, self.y[i]+10/2,5,5))
+                pygame.draw.rect(self.main_surface,(239, 218, 67) , (self.x[i]+3*5, self.y[i]+10/2,5,5))
+                pygame.draw.rect(self.main_surface,(239, 213, 64) , (self.x[i]+4*5, self.y[i]+10/2,5,5))
+                pygame.draw.rect(self.main_surface,(241, 206, 60) , (self.x[i]+5*5, self.y[i]+10/2,5,5))
+                pygame.draw.rect(self.main_surface,(241, 203, 58) , (self.x[i]+6*5, self.y[i]+10/2,5,5))
+                pygame.draw.rect(self.main_surface,(231, 200, 57) , (self.x[i]+7*5, self.y[i]+10/2,5,5))
+                pygame.draw.rect(self.main_surface,(248, 238, 106) , (self.x[i]+8*5, self.y[i]+10/2,5,5))
+                pygame.draw.rect(self.main_surface,(244, 231, 179) , (self.x[i]+9*5, self.y[i]+10/2,5,5))
+                pygame.draw.rect(self.main_surface,(244, 250, 240) , (self.x[i]+0*5, self.y[i]+20/2,5,5))
+                pygame.draw.rect(self.main_surface,(236, 197, 60) , (self.x[i]+1*5, self.y[i]+20/2,5,5))
+                pygame.draw.rect(self.main_surface,(239, 215, 67) , (self.x[i]+2*5, self.y[i]+20/2,5,5))
+                pygame.draw.rect(self.main_surface,(240, 213, 64) , (self.x[i]+3*5, self.y[i]+20/2,5,5))
+                pygame.draw.rect(self.main_surface,(241, 210, 60) , (self.x[i]+4*5, self.y[i]+20/2,5,5))
+                pygame.draw.rect(self.main_surface,(238, 202, 54) , (self.x[i]+5*5, self.y[i]+20/2,5,5))
+                pygame.draw.rect(self.main_surface,(241, 201, 54) , (self.x[i]+6*5, self.y[i]+20/2,5,5))
+                pygame.draw.rect(self.main_surface,(238, 198, 51) , (self.x[i]+7*5, self.y[i]+20/2,5,5))
+                pygame.draw.rect(self.main_surface,(237, 194, 56) , (self.x[i]+8*5, self.y[i]+20/2,5,5))
+                pygame.draw.rect(self.main_surface,(241, 208, 92) , (self.x[i]+9*5, self.y[i]+20/2,5,5))
+                pygame.draw.rect(self.main_surface,(255, 244, 248) , (self.x[i]+0*5, self.y[i]+30/2,5,5))
+                pygame.draw.rect(self.main_surface,(239, 201, 54) , (self.x[i]+1*5, self.y[i]+30/2,5,5))
+                pygame.draw.rect(self.main_surface,(238, 211, 62) , (self.x[i]+2*5, self.y[i]+30/2,5,5))
+                pygame.draw.rect(self.main_surface,(240, 205, 59) , (self.x[i]+3*5, self.y[i]+30/2,5,5))
+                pygame.draw.rect(self.main_surface,(241, 201, 54) , (self.x[i]+4*5, self.y[i]+30/2,5,5))
+                pygame.draw.rect(self.main_surface,(240, 200, 50) , (self.x[i]+5*5, self.y[i]+30/2,5,5))
+                pygame.draw.rect(self.main_surface,(239, 201, 56) , (self.x[i]+6*5, self.y[i]+30/2,5,5))
+                pygame.draw.rect(self.main_surface,(233, 192, 48) , (self.x[i]+7*5, self.y[i]+30/2,5,5))
+                pygame.draw.rect(self.main_surface,(234, 191, 50) , (self.x[i]+8*5, self.y[i]+30/2,5,5))
+                pygame.draw.rect(self.main_surface,(252, 241, 100) , (self.x[i]+9*5, self.y[i]+30/2,5,5))
+                pygame.draw.rect(self.main_surface,(242, 249, 242) , (self.x[i]+0*5, self.y[i]+40/2,5,5))
+                pygame.draw.rect(self.main_surface,(239, 211, 65) , (self.x[i]+1*5, self.y[i]+40/2,5,5))
+                pygame.draw.rect(self.main_surface,(240, 205, 59) , (self.x[i]+2*5, self.y[i]+40/2,5,5))
+                pygame.draw.rect(self.main_surface,(238, 200, 53) , (self.x[i]+3*5, self.y[i]+40/2,5,5))
+                pygame.draw.rect(self.main_surface,(241, 199, 51) , (self.x[i]+4*5, self.y[i]+40/2,5,5))
+                pygame.draw.rect(self.main_surface,(242, 201, 57) , (self.x[i]+5*5, self.y[i]+40/2,5,5))
+                pygame.draw.rect(self.main_surface,(232, 191, 47) , (self.x[i]+6*5, self.y[i]+40/2,5,5))
+                pygame.draw.rect(self.main_surface,(233, 188, 45) , (self.x[i]+7*5, self.y[i]+40/2,5,5))
+                pygame.draw.rect(self.main_surface,(228, 185, 44) , (self.x[i]+8*5, self.y[i]+40/2,5,5))
+                pygame.draw.rect(self.main_surface,(230, 183, 41) , (self.x[i]+9*5, self.y[i]+40/2,5,5))
+                pygame.draw.rect(self.main_surface,(242, 246, 255) , (self.x[i]+0*5, self.y[i]+50/2,5,5))
+                pygame.draw.rect(self.main_surface,(236, 191, 46) , (self.x[i]+1*5, self.y[i]+50/2,5,5))
+                pygame.draw.rect(self.main_surface,(242, 201, 51) , (self.x[i]+2*5, self.y[i]+50/2,5,5))
+                pygame.draw.rect(self.main_surface,(242, 197, 52) , (self.x[i]+3*5, self.y[i]+50/2,5,5))
+                pygame.draw.rect(self.main_surface,(238, 196, 52) , (self.x[i]+4*5, self.y[i]+50/2,5,5))
+                pygame.draw.rect(self.main_surface,(231, 189, 45) , (self.x[i]+5*5, self.y[i]+50/2,5,5))
+                pygame.draw.rect(self.main_surface,(230, 185, 42) , (self.x[i]+6*5, self.y[i]+50/2,5,5))
+                pygame.draw.rect(self.main_surface,(230, 183, 41) , (self.x[i]+7*5, self.y[i]+50/2,5,5))
+                pygame.draw.rect(self.main_surface,(229, 182, 42) , (self.x[i]+8*5, self.y[i]+50/2,5,5))
+                pygame.draw.rect(self.main_surface,(225, 178, 36) , (self.x[i]+9*5, self.y[i]+50/2,5,5))
+                pygame.draw.rect(self.main_surface,(255, 245, 233) , (self.x[i]+0*5, self.y[i]+60/2,5,5))
+                pygame.draw.rect(self.main_surface,(234, 189, 44) , (self.x[i]+1*5, self.y[i]+60/2,5,5))
+                pygame.draw.rect(self.main_surface,(216, 188, 44) , (self.x[i]+2*5, self.y[i]+60/2,5,5))
+                pygame.draw.rect(self.main_surface,(231, 186, 43) , (self.x[i]+3*5, self.y[i]+60/2,5,5))
+                pygame.draw.rect(self.main_surface,(231, 184, 44) , (self.x[i]+4*5, self.y[i]+60/2,5,5))
+                pygame.draw.rect(self.main_surface,(231, 184, 44) , (self.x[i]+5*5, self.y[i]+60/2,5,5))
+                pygame.draw.rect(self.main_surface,(228, 181, 41) , (self.x[i]+6*5, self.y[i]+60/2,5,5))
+                pygame.draw.rect(self.main_surface,(227, 178, 37) , (self.x[i]+7*5, self.y[i]+60/2,5,5))
+                pygame.draw.rect(self.main_surface,(229, 178, 37) , (self.x[i]+8*5, self.y[i]+60/2,5,5))
+                pygame.draw.rect(self.main_surface,(234, 196, 53) , (self.x[i]+9*5, self.y[i]+60/2,5,5))
+                pygame.draw.rect(self.main_surface,(247, 246, 244) , (self.x[i]+0*5, self.y[i]+70/2,5,5))
+                pygame.draw.rect(self.main_surface,(252, 244, 208) , (self.x[i]+1*5, self.y[i]+70/2,5,5))
+                pygame.draw.rect(self.main_surface,(226, 193, 52) , (self.x[i]+2*5, self.y[i]+70/2,5,5))
+                pygame.draw.rect(self.main_surface,(226, 179, 39) , (self.x[i]+3*5, self.y[i]+70/2,5,5))
+                pygame.draw.rect(self.main_surface,(227, 178, 37) , (self.x[i]+4*5, self.y[i]+70/2,5,5))
+                pygame.draw.rect(self.main_surface,(229, 178, 37) , (self.x[i]+5*5, self.y[i]+70/2,5,5))
+                pygame.draw.rect(self.main_surface,(227, 176, 35) , (self.x[i]+6*5, self.y[i]+70/2,5,5))
+                pygame.draw.rect(self.main_surface,(228, 174, 39) , (self.x[i]+7*5, self.y[i]+70/2,5,5))
+                pygame.draw.rect(self.main_surface,(225, 173, 38) , (self.x[i]+8*5, self.y[i]+70/2,5,5))
+                pygame.draw.rect(self.main_surface,(221, 172, 31) , (self.x[i]+9*5, self.y[i]+70/2,5,5))
+                pygame.draw.rect(self.main_surface,(247, 247, 247) , (self.x[i]+0*5, self.y[i]+80/2,5,5))
+                pygame.draw.rect(self.main_surface,(250, 246, 243) , (self.x[i]+1*5, self.y[i]+80/2,5,5))
+                pygame.draw.rect(self.main_surface,(227, 204, 136) , (self.x[i]+2*5, self.y[i]+80/2,5,5))
+                pygame.draw.rect(self.main_surface,(223, 185, 58) , (self.x[i]+3*5, self.y[i]+80/2,5,5))
+                pygame.draw.rect(self.main_surface,(228, 175, 35) , (self.x[i]+4*5, self.y[i]+80/2,5,5))
+                pygame.draw.rect(self.main_surface,(227, 173, 38) , (self.x[i]+5*5, self.y[i]+80/2,5,5))
+                pygame.draw.rect(self.main_surface,(225, 171, 37) , (self.x[i]+6*5, self.y[i]+80/2,5,5))
+                pygame.draw.rect(self.main_surface,(226, 170, 33) , (self.x[i]+7*5, self.y[i]+80/2,5,5))
+                pygame.draw.rect(self.main_surface,(224, 163, 13) , (self.x[i]+8*5, self.y[i]+80/2,5,5))
+                pygame.draw.rect(self.main_surface,(245, 246, 241) , (self.x[i]+9*5, self.y[i]+80/2,5,5))
+                pygame.draw.rect(self.main_surface,(247, 247, 247) , (self.x[i]+0*5, self.y[i]+90/2,5,5))
+                pygame.draw.rect(self.main_surface,(247, 247, 247) , (self.x[i]+1*5, self.y[i]+90/2,5,5))
+                pygame.draw.rect(self.main_surface,(247, 248, 243) , (self.x[i]+2*5, self.y[i]+90/2,5,5))
+                pygame.draw.rect(self.main_surface,(241, 242, 255) , (self.x[i]+3*5, self.y[i]+90/2,5,5))
+                pygame.draw.rect(self.main_surface,(228, 177, 49) , (self.x[i]+4*5, self.y[i]+90/2,5,5))
+                pygame.draw.rect(self.main_surface,(234, 173, 22) , (self.x[i]+5*5, self.y[i]+90/2,5,5))
+                pygame.draw.rect(self.main_surface,(227, 171, 16) , (self.x[i]+6*5, self.y[i]+90/2,5,5))
+                pygame.draw.rect(self.main_surface,(249, 244, 240) , (self.x[i]+7*5, self.y[i]+90/2,5,5))
+                pygame.draw.rect(self.main_surface,(250, 246, 245) , (self.x[i]+8*5, self.y[i]+90/2,5,5))
+                pygame.draw.rect(self.main_surface,(247, 247, 247) , (self.x[i]+9*5, self.y[i]+90/2,5,5))
             else:
                 pass
                 
@@ -229,7 +324,9 @@ class top_app():
         
         going = True
         while going:
-
+            if (self.stop==1):
+                start = time.time()
+                
             t = time.time() - start
             if(t>15):
                 self.timeout=1
@@ -303,6 +400,16 @@ class top_app():
                 #的移動
                 self.target_move()	    
     
+                self.make_wall()     
+                self.wall_move()     
+                
+                #弾             
+                self.make_ball()
+                
+                #大砲             
+                self.make_gun()
+                self.make_dummy()
+                self.dummy_move()
     
                         
                         
@@ -327,16 +434,6 @@ class top_app():
                 texthit = font.render("GAME CLEAR !", True, (0,0,0))
                 self.stop=1                            
                     
-            self.make_wall()     
-            self.wall_move()     
-                
-            #弾             
-            self.make_ball()
-                
-            #大砲             
-            self.make_gun()
-            self.make_dummy()
-            self.dummy_move()
             
             
                 

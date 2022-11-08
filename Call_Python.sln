@@ -55,6 +55,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "multi_scraping", "multi_scr
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "tombodor", "tombodor\tombodor.pyproj", "{D8904990-0B7D-4152-81F4-68051AEB9B96}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "py_sqlite3_jpg", "py_sqlite3_jpg\py_sqlite3_jpg.pyproj", "{D1476D60-22C7-411F-B406-5E4340FE9D16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,8 @@ Global
 		{DBF4BF59-CA0C-420C-9656-141D66DA445C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8904990-0B7D-4152-81F4-68051AEB9B96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8904990-0B7D-4152-81F4-68051AEB9B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1476D60-22C7-411F-B406-5E4340FE9D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1476D60-22C7-411F-B406-5E4340FE9D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
