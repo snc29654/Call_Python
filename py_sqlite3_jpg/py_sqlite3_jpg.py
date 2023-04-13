@@ -25,7 +25,7 @@ import threading
 import time
 
 
-wf = 'C:\\jpg\\write.jpg' #書き込み画像ファイルパス
+wf = 'C:\\jpg\\write.jpg' #書き込み画像ファイルパス2023.04.13
 
 class main_window(tk.Frame):
 
@@ -385,6 +385,7 @@ class main_window(tk.Frame):
             data1 = row[1]
             data2 = row[2]
             data3 = row[3]
+            path = row[4]
             blob =  row[5]
         self.txt1.delete(0, tk.END)         
         self.txt1.insert(tkinter.END,data1)
@@ -393,12 +394,68 @@ class main_window(tk.Frame):
         self.txt3.delete(0, tk.END)         
         self.txt3.insert(tkinter.END,data3)
 
+        self.textExample.insert(tkinter.END,"\n")
+        self.textExample.insert(tkinter.END,self.id)
+        self.textExample.insert(tkinter.END," : ")
+        self.textExample.insert(tkinter.END,path)
+        self.textExample.yview_moveto(1)
+
+
         with open(wf, 'wb') as f:
             f.write(blob)
 
         self.select_one_image(wf)
 
 
+
+
+    def write_db(self):
+        self.dbname = '../'+self.txt7.get()
+        global filenames
+
+        if(self.dir==0):
+            self.textExample.insert(tkinter.END,"jpgが未指定\n")
+            return
+
+        self.data1 =self.txt1.get()
+        self.data2 =self.txt2.get()
+        self.data3 =self.txt3.get()
+        
+        thread1 = threading.Thread(target=self.dbwrite_thread)
+        thread1.start()
+
+        
+    def dbwrite_thread(self):
+        
+     self.dbname = '../'+self.txt7.get()
+     #DBコネクト​
+     with closing(sqlite3.connect(self.dbname)) as self.conn:
+        self.c = self.conn.cursor()
+        create_table = '''create table users (id integer primary key autoincrement, data1 varchar(64),
+                      data2 varchar(64), data3 varchar(64),path varchar(64),data_jpg img)'''
+        #テーブルクリエイト​
+        try:
+            self.c.execute(create_table)
+        except:
+            pass
+        
+        
+        for file in self.filenames:
+            file_c = file.replace('\\', '\\\\');
+
+            self.path=file_c
+
+
+            self.textExample.insert(tkinter.END,"\n")
+            self.textExample.insert(tkinter.END,file_c)
+            self.textExample.yview_moveto(1)
+        
+            with open(file_c, 'rb') as f:
+                self.data_jpg = f.read()
+
+            self.dbwrite()
+ 
+        self.conn.close()
 
 
     def write_db(self):
