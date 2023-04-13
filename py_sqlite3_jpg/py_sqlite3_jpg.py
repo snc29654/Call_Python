@@ -25,7 +25,7 @@ import threading
 import time
 
 
-wf = 'C:\\jpg\\write.jpg' #書き込み画像ファイルパス
+wf = 'C:\\jpg\\write.jpg' #書き込み画像ファイルパス2023.04.13
 
 class main_window(tk.Frame):
 
