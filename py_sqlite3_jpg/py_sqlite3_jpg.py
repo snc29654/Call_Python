@@ -367,7 +367,7 @@ class main_window(tk.Frame):
      self.sizevalid=1
 
   
-     #DBコネクト​
+     #DBコネクト​2023.04.15
      with closing(sqlite3.connect(self.dbname)) as conn:
         c = conn.cursor()
         create_table = '''create table users (id integer primary key autoincrement, data1 varchar(64),
