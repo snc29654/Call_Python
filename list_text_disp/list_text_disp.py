@@ -219,7 +219,7 @@ class image_gui():
         self.text_box = tk.Text(bg="#000", fg="#fff", insertbackground="#fff",
                    height=10)
         self.text_box.pack()
-        self.text_box.place(x=20, y=20)
+        self.text_box.place(x=20, y=20,width=800,height=450)
         fontExample = tkFont.Font(family="Courier", size=self.font_size, weight="normal", slant="roman")
 
         self.text_box.configure(font=fontExample)
@@ -240,7 +240,7 @@ class image_gui():
 
             lines = f.readlines()
             for line in lines:
-                print(line, end='')
+                #print(line, end='')
                 self.text_box.insert(END, line)
 
 
